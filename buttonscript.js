@@ -1,5 +1,3 @@
-gsap.registerPlugin(Physics2DPlugin);
-
 document.querySelectorAll('.button').forEach(button => {
 
     const bounding = button.getBoundingClientRect()
