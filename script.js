@@ -16,6 +16,28 @@ const getAreaDetails = (area) => {
   };
 };
 
+const setTweenArea = (link, magicArea) => {
+  const { left, height, top, width } = getAreaDetails(link);
+
+  gsap.set(magicArea, {
+    top,
+    left,
+    width,
+    height
+  });
+};
+
+const tweenMagicArea = (target, magicArea) => {
+  const { left, height, top, width } = getAreaDetails(target);
+
+  gsap.to(magicArea, 0.5, {
+    left,
+    top,
+    width,
+    height,
+    ease: Power3.easeInOut
+  });
+};
 
 const getMagicActiveElement = (links) => {
   return links.filter((link) => {
